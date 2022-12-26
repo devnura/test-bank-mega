@@ -1,0 +1,63 @@
+CRITICAL - 2022-12-26 02:24:45 --> Call to undefined method CodeIgniter\Router\RouteCollection::gte()
+in APPPATH\Config\Routes.php on line 42.
+ 1 SYSTEMPATH\CodeIgniter.php(787): require()
+ 2 SYSTEMPATH\CodeIgniter.php(428): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2022-12-26 02:30:48 --> ErrorException: pg_query(): Query failed: ERROR:  column &quot;nik&quot; does not exist
+LINE 3: WHERE &quot;nik&quot; = '123'
+              ^
+HINT:  Perhaps you meant to reference the column &quot;karyawan.nip&quot;. in C:\xampp\htdocs\test_bank_mega\system\Database\Postgre\Connection.php:140
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'C:\\xampp\\htdocs...', 140, Array)
+#1 C:\xampp\htdocs\test_bank_mega\system\Database\Postgre\Connection.php(140): pg_query(Resource id #125, 'SELECT 1\nFROM "...')
+#2 C:\xampp\htdocs\test_bank_mega\system\Database\BaseConnection.php(666): CodeIgniter\Database\Postgre\Connection->execute('SELECT 1\nFROM "...')
+#3 C:\xampp\htdocs\test_bank_mega\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1\nFROM "...')
+#4 C:\xampp\htdocs\test_bank_mega\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM "...', Array, false)
+#5 C:\xampp\htdocs\test_bank_mega\system\Validation\Rules.php(142): CodeIgniter\Database\BaseBuilder->get()
+#6 C:\xampp\htdocs\test_bank_mega\system\Validation\Validation.php(315): CodeIgniter\Validation\Rules->is_unique('123', 'nik', Array, NULL, 'nip')
+#7 C:\xampp\htdocs\test_bank_mega\system\Validation\Validation.php(175): CodeIgniter\Validation\Validation->processRules('nip', 'nip', '123', Array, Array)
+#8 C:\xampp\htdocs\test_bank_mega\system\Controller.php(140): CodeIgniter\Validation\Validation->run()
+#9 C:\xampp\htdocs\test_bank_mega\app\Controllers\Home.php(76): CodeIgniter\Controller->validate(Array)
+#10 C:\xampp\htdocs\test_bank_mega\system\CodeIgniter.php(925): App\Controllers\Home->save('0')
+#11 C:\xampp\htdocs\test_bank_mega\system\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#12 C:\xampp\htdocs\test_bank_mega\system\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#13 C:\xampp\htdocs\test_bank_mega\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#14 C:\xampp\htdocs\test_bank_mega\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#15 {main}
+ERROR - 2022-12-26 02:31:07 --> ErrorException: pg_query(): Query failed: ERROR:  column &quot;nik&quot; does not exist
+LINE 3: WHERE &quot;nik&quot; = '123'
+              ^
+HINT:  Perhaps you meant to reference the column &quot;karyawan.nip&quot;. in C:\xampp\htdocs\test_bank_mega\system\Database\Postgre\Connection.php:140
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'C:\\xampp\\htdocs...', 140, Array)
+#1 C:\xampp\htdocs\test_bank_mega\system\Database\Postgre\Connection.php(140): pg_query(Resource id #125, 'SELECT 1\nFROM "...')
+#2 C:\xampp\htdocs\test_bank_mega\system\Database\BaseConnection.php(666): CodeIgniter\Database\Postgre\Connection->execute('SELECT 1\nFROM "...')
+#3 C:\xampp\htdocs\test_bank_mega\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1\nFROM "...')
+#4 C:\xampp\htdocs\test_bank_mega\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM "...', Array, false)
+#5 C:\xampp\htdocs\test_bank_mega\system\Validation\Rules.php(142): CodeIgniter\Database\BaseBuilder->get()
+#6 C:\xampp\htdocs\test_bank_mega\system\Validation\Validation.php(315): CodeIgniter\Validation\Rules->is_unique('123', 'nik', Array, NULL, 'nip')
+#7 C:\xampp\htdocs\test_bank_mega\system\Validation\Validation.php(175): CodeIgniter\Validation\Validation->processRules('nip', 'nip', '123', Array, Array)
+#8 C:\xampp\htdocs\test_bank_mega\system\Controller.php(140): CodeIgniter\Validation\Validation->run()
+#9 C:\xampp\htdocs\test_bank_mega\app\Controllers\Home.php(76): CodeIgniter\Controller->validate(Array)
+#10 C:\xampp\htdocs\test_bank_mega\system\CodeIgniter.php(925): App\Controllers\Home->save('0')
+#11 C:\xampp\htdocs\test_bank_mega\system\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#12 C:\xampp\htdocs\test_bank_mega\system\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#13 C:\xampp\htdocs\test_bank_mega\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#14 C:\xampp\htdocs\test_bank_mega\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#15 {main}
+CRITICAL - 2022-12-26 02:44:52 --> Cannot access protected property CodeIgniter\Validation\Validation::$errors
+in APPPATH\Controllers\Home.php on line 97.
+ 1 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Home->save('0')
+ 2 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-26 02:45:01 --> Call to undefined method CodeIgniter\Validation\Validation::errors()
+in APPPATH\Controllers\Home.php on line 97.
+ 1 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Home->save('0')
+ 2 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
